@@ -1,0 +1,48 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	display: inline-flex;
+	padding: rem(16) rem(30);
+	font-size: rem(14);
+	line-height: math.div(22, 14);
+	font-weight: 500;
+	letter-spacing: rem(2);
+	color: $mainText;
+	border-radius: rem(50);
+	transition: all 0.4s ease 0s;
+	
+	@media (any-hover: hover) {
+		&:hover {
+		}
+
+		&:active{
+			transform: scale(0.95);
+		}
+	}
+	&._fw {
+		width: 100%;
+	}
+
+	&__accent {
+		transition: all 0.4s ease 0s;
+		background-color: $accentColor;
+		@media (any-hover: hover){
+			&:hover{
+				background-color: #3571b1;
+			}
+		}
+	}
+
+    &__secondary {
+		background-color: $secondaryColor;
+
+		@media (any-hover: hover){
+			&:hover{
+				color: $secondaryText;
+				background-color: transparent;
+				outline: 3px solid $secondaryText;
+			}
+		}
+	}
+}
